@@ -1,5 +1,6 @@
 package net.survivalplus;
 
+import net.survivalplus.commands.Commanddisposal;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SurvivalPlus extends JavaPlugin {
@@ -10,6 +11,7 @@ public class SurvivalPlus extends JavaPlugin {
     public void onEnable() {
 
         instance = this;
+        registerCommands(); // Loads commands, when the plugin starts.
 
     }
 
@@ -17,6 +19,15 @@ public class SurvivalPlus extends JavaPlugin {
     public void onDisable() {
 
         instance = null;
+
+    }
+
+    /**
+     * Registers commands.
+     */
+    private void registerCommands() {
+
+        getCommand("disposal").setExecutor(new Commanddisposal());
 
     }
 
