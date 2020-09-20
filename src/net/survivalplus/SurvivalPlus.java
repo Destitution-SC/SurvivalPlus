@@ -4,13 +4,23 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class SurvivalPlus extends JavaPlugin {
 
+    private static SurvivalPlus instance;
+
     @Override
     public void onEnable() {
+
+        instance = this;
 
     }
 
     @Override
     public void onDisable() {
 
+        instance = null;
+
+    }
+
+    public static SurvivalPlus getInstance() {
+        return instance;
     }
 }
