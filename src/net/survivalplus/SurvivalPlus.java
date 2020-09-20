@@ -20,6 +20,11 @@ public class SurvivalPlus extends JavaPlugin {
 
     }
 
+    /**
+     * Used in other classes to access the {@link SurvivalPlus} class.
+     *
+     * @return instance
+     */
     public static SurvivalPlus getInstance() {
         return instance;
     }
