@@ -3,8 +3,3 @@ author: "Destitution"
 main: net.survivalplus.SurvivalPlus
 version: "1.0-SNAPSHOT"
 api-version: "1.16"
-
-commands:
-  disposal:
-    description: Removes stuff from your inventory forever.
-    aliases: [dispo, bin]
