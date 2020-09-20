@@ -1,5 +1,5 @@
-name: ${artifactId}
+name: "SurvivalPlus"
 author: "Destitution"
 main: net.survivalplus.SurvivalPlus
-version: ${version}
+version: "1.0-SNAPSHOT"
 api-version: "1.16"
