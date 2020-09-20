@@ -1,0 +1,5 @@
+name: ${artifactId}
+author: "Destitution"
+main: net.survivalplus.SurvivalPlus
+version: ${version}
+api-version: "1.16"
