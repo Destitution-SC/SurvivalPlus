@@ -19,6 +19,10 @@ public class SurvivalPlus extends JavaPlugin {
     public void onDisable() {
 
         instance = null;
+        // This is a test for the GitHub API.
+        // OK LETS SEE IF
+        // IT WILL WORK
+        // OK
 
     }
 
