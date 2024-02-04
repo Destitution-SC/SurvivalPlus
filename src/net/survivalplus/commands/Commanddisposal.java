@@ -1,5 +1,6 @@
 package net.survivalplus.commands;
 
+import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -20,9 +21,11 @@ public class Commanddisposal implements CommandExecutor {
         if(!(sender instanceof Player)) sender.sendMessage("§cError: §6You must be a player to use this command.");
         else { // sender is player.
             Player player = (Player) sender; // gets the player from the sender.
-            Inventory inv = Bukkit.createInventory(null, 54, "§4Disposal"); // creates the inventory.
-            player.sendMessage("§cWarning: §6Everything you put in here will disappear forever!"); // warn the player with a message.
-            player.openInventory(inv); // opens the inventory for the player.
+            if(!player.hasPermission("SurvivalPlus.disposal")) {
+                Inventory inv = Bukkit.createInventory(null, 54, Component.text("§4Disposal")); // creates the inventory.
+                player.sendMessage("§cWarning: §6Everything you put in here will disappear forever!"); // warn the player with a message.
+                player.openInventory(inv); // opens the inventory for the player.
+            } else player.sendMessage("§cYou do not have access to that command.");
         }
         return true;
     }
