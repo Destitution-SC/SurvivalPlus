@@ -9,21 +9,13 @@ public class SurvivalPlus extends JavaPlugin {
 
     @Override
     public void onEnable() {
-
         instance = this;
         registerCommands(); // Loads commands, when the plugin starts.
-
     }
 
     @Override
     public void onDisable() {
-
         instance = null;
-        // This is a test for the GitHub API.
-        // OK LETS SEE IF
-        // IT WILL WORK
-        // OK
-
     }
 
     /**
